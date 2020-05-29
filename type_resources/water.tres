@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://global/type.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+str_key = "water"
+name = "Water"
+color = Color( 0, 0.486275, 1, 1 )
+defensive_effectivenesses = {
+"electric": 2.0,
+"fire": 0.5,
+"grass": 2.0,
+"ice": 0.5,
+"steel": 0.5,
+"water": 0.5
+}

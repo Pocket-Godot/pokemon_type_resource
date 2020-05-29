@@ -1,0 +1,266 @@
+[gd_scene load_steps=42 format=2]
+
+[ext_resource path="res://sprites/bug.png" type="Texture" id=1]
+[ext_resource path="res://scripts/cart.gd" type="Script" id=2]
+[ext_resource path="res://objects/Frame.tscn" type="PackedScene" id=3]
+[ext_resource path="res://sprites/dragon.png" type="Texture" id=4]
+[ext_resource path="res://sprites/rock.png" type="Texture" id=5]
+[ext_resource path="res://sprites/psychic.png" type="Texture" id=6]
+[ext_resource path="res://sprites/dark.png" type="Texture" id=7]
+[ext_resource path="res://sprites/electric.png" type="Texture" id=8]
+[ext_resource path="res://sprites/water.png" type="Texture" id=9]
+[ext_resource path="res://sprites/steel.png" type="Texture" id=10]
+[ext_resource path="res://sprites/poison.png" type="Texture" id=11]
+[ext_resource path="res://sprites/normal.png" type="Texture" id=12]
+[ext_resource path="res://sprites/ice.png" type="Texture" id=13]
+[ext_resource path="res://sprites/ground.png" type="Texture" id=14]
+[ext_resource path="res://sprites/grass.png" type="Texture" id=15]
+[ext_resource path="res://sprites/flying.png" type="Texture" id=16]
+[ext_resource path="res://sprites/fire.png" type="Texture" id=17]
+[ext_resource path="res://sprites/fighting.png" type="Texture" id=18]
+[ext_resource path="res://sprites/fairy.png" type="Texture" id=19]
+[ext_resource path="res://sprites/ghost.png" type="Texture" id=20]
+[ext_resource path="res://sprites/pow.png" type="Texture" id=21]
+[ext_resource path="res://type_resources/bug.tres" type="Resource" id=22]
+[ext_resource path="res://scripts/pow.gd" type="Script" id=23]
+[ext_resource path="res://type_resources/electric.tres" type="Resource" id=24]
+[ext_resource path="res://type_resources/dark.tres" type="Resource" id=25]
+[ext_resource path="res://type_resources/fairy.tres" type="Resource" id=26]
+[ext_resource path="res://type_resources/fighting.tres" type="Resource" id=27]
+[ext_resource path="res://type_resources/fire.tres" type="Resource" id=28]
+[ext_resource path="res://type_resources/flying.tres" type="Resource" id=29]
+[ext_resource path="res://type_resources/dragon.tres" type="Resource" id=30]
+[ext_resource path="res://type_resources/psychic.tres" type="Resource" id=31]
+[ext_resource path="res://type_resources/poison.tres" type="Resource" id=32]
+[ext_resource path="res://type_resources/ground.tres" type="Resource" id=33]
+[ext_resource path="res://type_resources/ice.tres" type="Resource" id=34]
+[ext_resource path="res://type_resources/ghost.tres" type="Resource" id=35]
+[ext_resource path="res://type_resources/grass.tres" type="Resource" id=36]
+[ext_resource path="res://type_resources/normal.tres" type="Resource" id=37]
+[ext_resource path="res://type_resources/water.tres" type="Resource" id=38]
+[ext_resource path="res://type_resources/steel.tres" type="Resource" id=39]
+[ext_resource path="res://type_resources/rock.tres" type="Resource" id=40]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 16, 16 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Types" type="Node2D" parent="."]
+
+[node name="Bug" type="Area2D" parent="Types"]
+position = Vector2( 40, 39 )
+script = ExtResource( 2 )
+type = ExtResource( 22 )
+
+[node name="Sprite" type="Sprite" parent="Types/Bug"]
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Types/Bug"]
+shape = SubResource( 1 )
+
+[node name="Dark" type="Area2D" parent="Types"]
+position = Vector2( 102, 39 )
+script = ExtResource( 2 )
+type = ExtResource( 25 )
+
+[node name="Sprite" type="Sprite" parent="Types/Dark"]
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Types/Dark"]
+shape = SubResource( 1 )
+
+[node name="Dragon" type="Area2D" parent="Types"]
+position = Vector2( 170, 39 )
+script = ExtResource( 2 )
+type = ExtResource( 30 )
+
+[node name="Sprite" type="Sprite" parent="Types/Dragon"]
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Types/Dragon"]
+shape = SubResource( 1 )
+
+[node name="Electric" type="Area2D" parent="Types"]
+position = Vector2( 239, 39 )
+script = ExtResource( 2 )
+type = ExtResource( 24 )
+
+[node name="Sprite" type="Sprite" parent="Types/Electric"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Types/Electric"]
+shape = SubResource( 1 )
+
+[node name="Fairy" type="Area2D" parent="Types"]
+position = Vector2( 301, 39 )
+script = ExtResource( 2 )
+type = ExtResource( 26 )
+
+[node name="Sprite" type="Sprite" parent="Types/Fairy"]
+texture = ExtResource( 19 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Types/Fairy"]
+shape = SubResource( 1 )
+
+[node name="Fighting" type="Area2D" parent="Types"]
+position = Vector2( 369, 39 )
+script = ExtResource( 2 )
+type = ExtResource( 27 )
+
+[node name="Sprite" type="Sprite" parent="Types/Fighting"]
+texture = ExtResource( 18 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Types/Fighting"]
+shape = SubResource( 1 )
+
+[node name="Fire" type="Area2D" parent="Types"]
+position = Vector2( 40, 91.6316 )
+script = ExtResource( 2 )
+type = ExtResource( 28 )
+
+[node name="Sprite" type="Sprite" parent="Types/Fire"]
+texture = ExtResource( 17 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Types/Fire"]
+shape = SubResource( 1 )
+
+[node name="Flying" type="Area2D" parent="Types"]
+position = Vector2( 102, 91.6316 )
+script = ExtResource( 2 )
+type = ExtResource( 29 )
+
+[node name="Sprite" type="Sprite" parent="Types/Flying"]
+texture = ExtResource( 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Types/Flying"]
+shape = SubResource( 1 )
+
+[node name="Ghost" type="Area2D" parent="Types"]
+position = Vector2( 170, 91.6316 )
+script = ExtResource( 2 )
+type = ExtResource( 35 )
+
+[node name="Sprite" type="Sprite" parent="Types/Ghost"]
+texture = ExtResource( 20 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Types/Ghost"]
+shape = SubResource( 1 )
+
+[node name="Grass" type="Area2D" parent="Types"]
+position = Vector2( 239, 91.6316 )
+script = ExtResource( 2 )
+type = ExtResource( 36 )
+
+[node name="Sprite" type="Sprite" parent="Types/Grass"]
+texture = ExtResource( 15 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Types/Grass"]
+shape = SubResource( 1 )
+
+[node name="Ground" type="Area2D" parent="Types"]
+position = Vector2( 301, 91.6316 )
+script = ExtResource( 2 )
+type = ExtResource( 33 )
+
+[node name="Sprite" type="Sprite" parent="Types/Ground"]
+texture = ExtResource( 14 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Types/Ground"]
+shape = SubResource( 1 )
+
+[node name="Ice" type="Area2D" parent="Types"]
+position = Vector2( 369, 91.6316 )
+script = ExtResource( 2 )
+type = ExtResource( 34 )
+
+[node name="Sprite" type="Sprite" parent="Types/Ice"]
+texture = ExtResource( 13 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Types/Ice"]
+shape = SubResource( 1 )
+
+[node name="Normal" type="Area2D" parent="Types"]
+position = Vector2( 40, 145.316 )
+script = ExtResource( 2 )
+type = ExtResource( 37 )
+
+[node name="Sprite" type="Sprite" parent="Types/Normal"]
+texture = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Types/Normal"]
+shape = SubResource( 1 )
+
+[node name="Poison" type="Area2D" parent="Types"]
+position = Vector2( 102, 145.316 )
+script = ExtResource( 2 )
+type = ExtResource( 32 )
+
+[node name="Sprite" type="Sprite" parent="Types/Poison"]
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Types/Poison"]
+shape = SubResource( 1 )
+
+[node name="Psychic" type="Area2D" parent="Types"]
+position = Vector2( 170, 145.316 )
+script = ExtResource( 2 )
+type = ExtResource( 31 )
+
+[node name="Sprite" type="Sprite" parent="Types/Psychic"]
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Types/Psychic"]
+shape = SubResource( 1 )
+
+[node name="Rock" type="Area2D" parent="Types"]
+position = Vector2( 239, 145.316 )
+script = ExtResource( 2 )
+type = ExtResource( 40 )
+
+[node name="Sprite" type="Sprite" parent="Types/Rock"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Types/Rock"]
+shape = SubResource( 1 )
+
+[node name="Steel" type="Area2D" parent="Types"]
+position = Vector2( 301, 145.316 )
+script = ExtResource( 2 )
+type = ExtResource( 39 )
+
+[node name="Sprite" type="Sprite" parent="Types/Steel"]
+texture = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Types/Steel"]
+shape = SubResource( 1 )
+
+[node name="Water" type="Area2D" parent="Types"]
+position = Vector2( 369, 145.316 )
+script = ExtResource( 2 )
+type = ExtResource( 38 )
+
+[node name="Sprite" type="Sprite" parent="Types/Water"]
+texture = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Types/Water"]
+shape = SubResource( 1 )
+
+[node name="Frames" type="Node2D" parent="."]
+
+[node name="FrameO" parent="Frames" instance=ExtResource( 3 )]
+position = Vector2( 70.8947, 232.263 )
+
+[node name="FrameD" parent="Frames" instance=ExtResource( 3 )]
+position = Vector2( 206.474, 215.843 )
+
+[node name="FrameD2" parent="Frames" instance=ExtResource( 3 )]
+position = Vector2( 206.474, 259 )
+
+[node name="Pow" type="Sprite" parent="Frames"]
+position = Vector2( 332.684, 231.842 )
+texture = ExtResource( 21 )
+script = ExtResource( 23 )
+nd_frmO = NodePath("../FrameO")
+nd_frmD1 = NodePath("../FrameD")
+nd_frmD2 = NodePath("../FrameD2")

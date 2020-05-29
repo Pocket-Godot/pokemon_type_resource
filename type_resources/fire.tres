@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://global/type.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+str_key = "fire"
+name = "Fire"
+color = Color( 1, 0.305882, 0, 1 )
+defensive_effectivenesses = {
+"bug": 0.5,
+"fairy": 0.5,
+"fire": 0.5,
+"grass": 0.5,
+"ground": 2.0,
+"ice": 0.5,
+"rock": 2.0,
+"steel": 0.5,
+"water": 2.0
+}

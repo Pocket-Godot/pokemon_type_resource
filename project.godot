@@ -1,0 +1,40 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Area2D",
+"class": "Cart",
+"language": "GDScript",
+"path": "res://scripts/cart.gd"
+}, {
+"base": "Area2D",
+"class": "Frame",
+"language": "GDScript",
+"path": "res://scripts/frame.gd"
+} ]
+_global_script_class_icons={
+"Cart": "",
+"Frame": ""
+}
+
+[application]
+
+config/name="Pokemon Type Resource"
+run/main_scene="res://Scene.tscn"
+config/icon="res://icon.png"
+
+[display]
+
+window/size/width=412
+window/size/height=300
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
